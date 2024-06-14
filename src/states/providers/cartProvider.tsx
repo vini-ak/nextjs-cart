@@ -1,6 +1,7 @@
 "use client"
 import { Product } from "@/domain";
-import { createContext, useCallback, useContext, useEffect, useReducer, useState } from "react";
+import { createContext, useEffect, useReducer, useState } from "react";
+import { cartReducer } from "../reducers";
 
 interface CartContextProps {
     items: string[];
@@ -10,21 +11,6 @@ interface CartContextProps {
 }
 
 export const CartContext = createContext({ } as CartContextProps);
-
-interface CartReducerAction {
-    type: 'add' | 'remove';
-    productId: string;
-    quantity: number;
-}
-const cartReducer = (state: string[], action: CartReducerAction) => {
-    if(action.type === "add" && action.quantity > 0) {
-        return [...state, action.productId]; // add to cart
-    } else if(action.type === "remove") {
-        return state.filter(item => item !== action.productId); // remove from cart
-    } else {
-        return state;
-    }
-}
 
 export const CartProvider = ({ children }: { children: any }) => {
     const [items, dispatch] = useReducer(cartReducer, []);

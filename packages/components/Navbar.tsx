@@ -36,6 +36,8 @@ export const Wrapper = styled.nav`
             top: -8px;
             right: -8px;
             background-color: red;
+            width: 1.2rem;
+            text-align: center;
             font-size: .75rem;
             padding: .25rem;
             border-radius: 50%;

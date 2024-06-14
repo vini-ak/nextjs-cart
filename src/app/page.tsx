@@ -4,11 +4,10 @@ import styled from "styled-components";
 import * as Components from "../../packages/components";
 import { useMemo } from "react";
 import { ProductsService } from "@/services";
-import { useCart } from "@/states/hooks/useCart";
-import { Product } from "@/domain";
 
 const Main = styled.main`
   padding: 2rem;
+  margin-top: 10vh;
 `;
 
 const CardGrid = styled.div`
