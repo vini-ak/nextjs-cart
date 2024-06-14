@@ -44,6 +44,13 @@ const Card = styled.div`
         }
     }
 
+    & .item-quantity {
+        margin-top: .5rem;
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+    }
+
     &:hover {
         background-color: #d8d2d2;
         transform: scale(1.01);
@@ -57,8 +64,30 @@ const AddToCartButton = styled.button`
     color: white;
     height: 64px;
     margin-top: 1rem;
-
 `;
+
+const InputField = styled.input `
+    margin: 0 .5rem;
+    width: 50px;
+`;
+
+const InputButton = styled.button`
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+    color: white;
+    font-size: 1.25rem;
+
+    &.plus {
+        background-color: green;
+    }
+
+    &.minus {
+        background-color: #941b1b;
+    }
+`;
+
 export const ItemCard = (product: Product) => {
     const { addToCart } = useCart();
 
@@ -101,11 +130,11 @@ export const ItemCard = (product: Product) => {
                     </div>
 
                     <div className="item-quantity">
-                        <button className="minus" disabled={itemQuantity === 0} 
-                            onClick={() => onChangeQuantity('remove')}>-</button>
-                        <input value={itemQuantity} onChange={(e) => { onChangeQuantity('add') }} type="number" name="qtd"/>
-                        <button className="plus"
-                            onClick={() => onChangeQuantity('add')}>+</button>
+                        <InputButton className="minus" disabled={itemQuantity === 0} 
+                            onClick={() => onChangeQuantity('remove')}><span>-</span></InputButton>
+                        <InputField value={itemQuantity} onChange={(e) => { onChangeQuantity('add') }} type="number" name="qtd"/>
+                        <InputButton className="plus"
+                            onClick={() => onChangeQuantity('add')}><span>+</span></InputButton>
                     </div>
 
                     <AddToCartButton className="add-to-cart" onClick={onAddToCart}>Adicionar ao carrinho</AddToCartButton>
