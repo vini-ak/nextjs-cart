@@ -1,10 +1,10 @@
 "use client"
 import { Product } from "@/domain";
-import { createContext, useEffect, useReducer, useState } from "react";
-import { cartReducer } from "../reducers";
+import { createContext, useCallback, useEffect, useReducer, useState } from "react";
+import { CartProducts, cartReducer } from "../reducers";
 
 interface CartContextProps {
-    items: string[];
+    items: CartProducts;
     totalItems: number;
     addToCart(product: Product, quantity: number): void;
     removeFromCart(product: Product, quantity: number): void;
@@ -13,13 +13,24 @@ interface CartContextProps {
 export const CartContext = createContext({ } as CartContextProps);
 
 export const CartProvider = ({ children }: { children: any }) => {
-    const [items, dispatch] = useReducer(cartReducer, []);
+    const [cart, dispatch] = useReducer(cartReducer, {} as CartProducts);
     const [totalItems, setTotalItems] = useState<number>(0);
+    const [updated, setUpdated] = useState(false);
 
-    useEffect(() => { setTotalItems(items.length) }, [items]);
+    useEffect(() => {
+        if(updated) {
+            let _totalItems = Object.keys(cart).length;
+            setTotalItems(_totalItems);
+            setUpdated(false);
+        }
+    }, [cart, updated]);
 
-    const addToCart = (product: Product, quantity: number) => dispatch({ type: 'add', productId: product._id, quantity });
-    const removeFromCart = (product: Product, quantity: number) => dispatch({ type: 'remove', productId: product._id, quantity });
+    const changeCart = useCallback((product: Product, quantity: number, type: 'add' | 'remove') => {
+        dispatch({ type, quantity, productId: product._id });
+        setUpdated(true);
+    }, [dispatch]);
+    const addToCart = (product: Product, quantity: number) => changeCart(product, quantity, 'add');
+    const removeFromCart = (product: Product, quantity: number) => changeCart(product, quantity, 'remove');
 
-    return <CartContext.Provider value={{ items, totalItems, addToCart, removeFromCart }} children={children} />
+    return <CartContext.Provider value={{ items: cart, totalItems, addToCart, removeFromCart }} children={children} />
 };

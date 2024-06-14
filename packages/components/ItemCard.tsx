@@ -21,7 +21,7 @@ const Card = styled.div`
         width: 100%;
         align-self: center;
     }
-
+    
     & > .content {
         align-self: flex-start;
         margin-top: 1.5rem;
