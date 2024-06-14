@@ -2,7 +2,7 @@
 import { Product } from "@/domain";
 import { useCart } from "@/states/hooks/useCart";
 import Image from "next/image";
-import { useCallback, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import styled from "styled-components";
 
 const Card = styled.div`
@@ -61,7 +61,14 @@ const AddToCartButton = styled.button`
 `;
 export const ItemCard = (product: Product) => {
     const { addToCart } = useCart();
-    const [itemQuantity, setItemQuantity] = useState<number>(0);
+
+    const [itemQuantity, setItemQuantity] = useState<number>(0); 
+    const [isClient, setIsClient] = useState(false)
+    
+    useEffect(() => {
+        // fixing hydration error
+        setIsClient(true)
+    }, [])
 
     const onAddToCart = useCallback(() => {
         addToCart(product, itemQuantity);
@@ -78,28 +85,32 @@ export const ItemCard = (product: Product) => {
 
     return (
         <Card>
-            <Image 
-                src={product.photo} 
-                alt={product.name}
-                // blurDataURL={undefined}
-                // placeholder="blur" 
-                width={500}
-                height={300}
-              />
-            <div className="content">
-                <p className="item-card-title">{product.name}</p>
-                <span className="item-card-price">{product.price.toFixed(2).replace('.', ',')}</span>
-            </div>
+            {
+                isClient && <>
+                    <Image 
+                        src={product.photo} 
+                        alt={product.name}
+                        // blurDataURL={undefined}
+                        // placeholder="blur" 
+                        width={500}
+                        height={300}
+                    />
+                    <div className="content">
+                        <p className="item-card-title">{product.name}</p>
+                        <p className="item-card-price">{product.price.toFixed(2).replace('.', ',')}</p>
+                    </div>
 
-            <div className="item-quantity">
-                <button className="minus" disabled={itemQuantity === 0} 
-                    onClick={() => onChangeQuantity('remove')}>-</button>
-                <input value={itemQuantity} onChange={(e) => { onChangeQuantity('add') }} type="number" name="qtd"/>
-                <button className="plus"
-                    onClick={() => onChangeQuantity('add')}>+</button>
-            </div>
+                    <div className="item-quantity">
+                        <button className="minus" disabled={itemQuantity === 0} 
+                            onClick={() => onChangeQuantity('remove')}>-</button>
+                        <input value={itemQuantity} onChange={(e) => { onChangeQuantity('add') }} type="number" name="qtd"/>
+                        <button className="plus"
+                            onClick={() => onChangeQuantity('add')}>+</button>
+                    </div>
 
-            <AddToCartButton className="add-to-cart" onClick={onAddToCart}>Adicionar ao carrinho</AddToCartButton>
+                    <AddToCartButton className="add-to-cart" onClick={onAddToCart}>Adicionar ao carrinho</AddToCartButton>
+                </>
+            }
         </Card>
     )
 }
