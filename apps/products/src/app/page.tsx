@@ -1,32 +1,18 @@
 
 "use client";
-import styled from "styled-components";
 import { Components } from "packages";
 import { useMemo } from "react";
 import { ProductsService } from "@/services";
 import { useCart } from "@/states/hooks/useCart";
-
-const Main = styled.main`
-  padding: 2rem;
-  margin-top: 10vh;
-`;
-
-const CardGrid = styled.div`
-  display: grid;
-  grid-gap: 1.25rem;
-  grid-template-columns: repeat(4, 1fr);
-  justify-items: center;
-  align-items: center;
-  -ms-grid-column-align: center;
-`;
+import * as Styles from "./styles";
 
 export default function Home() {
   const products = useMemo(() => new ProductsService().listProducts(), []);
   const { addToCart } = useCart();
 
   return (
-    <Main>
-        <CardGrid>
+    <Styles.Main>
+        <Styles.CardGrid>
             { products.map((product, i) => 
                 <Components.ItemCard 
                     key={i} 
@@ -34,7 +20,7 @@ export default function Home() {
                     addToCart={addToCart}
                   />
             )}
-        </CardGrid>
-    </Main>
+        </Styles.CardGrid>
+    </Styles.Main>
   )
 }

@@ -1,5 +1,8 @@
+import { NextFederationPlugin } from '@module-federation/nextjs-mf';
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+    reactStrictMode: true,
     compiler: {
         styledComponents: true
     },
@@ -14,7 +17,22 @@ const nextConfig = {
                 hostname: 'picsum.photos'
             }
         ]
-    },    
+    },
+    webpack: (config, options) => {
+        const { isServer } = options;
+        config.experiments = { topLevelAwait: true };
+        config.plugins.push(
+            new NextFederationPlugin({
+                name: 'products',
+                remotes: {
+                    cart: `cart@http://localhost:3002/_next/static/${isServer ? 'ssr' : 'chunks'}/remoteEntry.js`
+                },
+                filename: 'static/chunks/primaryEntry.js'
+            })
+        );
+
+        return config;
+    }
 };
 
 export default nextConfig;
