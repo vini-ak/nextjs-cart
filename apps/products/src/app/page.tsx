@@ -1,9 +1,10 @@
 
 "use client";
 import styled from "styled-components";
-import * as Components from "../../packages/components";
+import * as Components from "../../../imports";
 import { useMemo } from "react";
 import { ProductsService } from "@/services";
+import { useCart } from "@/states/hooks/useCart";
 
 const Main = styled.main`
   padding: 2rem;
@@ -21,6 +22,7 @@ const CardGrid = styled.div`
 
 export default function Home() {
   const products = useMemo(() => new ProductsService().listProducts(), []);
+  const { addToCart } = useCart();
 
   return (
     <Main>
@@ -28,10 +30,8 @@ export default function Home() {
             { products.map((product, i) => 
                 <Components.ItemCard 
                     key={i} 
-                    _id={product._id}
-                    name={product.name}
-                    price={product.price}
-                    photo={product.photo}
+                    product={product}
+                    addToCart={addToCart}
                   />
             )}
         </CardGrid>

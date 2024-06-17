@@ -1,6 +1,3 @@
-"use client"
-import { useCart } from "@/states/hooks/useCart";
-import Image from "next/image";
 import styled from "styled-components";
 
 export const Wrapper = styled.nav`
@@ -44,21 +41,3 @@ export const Wrapper = styled.nav`
         }
     }
 `;
-
-export const Navbar = () => {
-    const { totalItems } = useCart();
-
-    return (
-        <Wrapper>
-            <div className="cart">
-                <Image 
-                    alt="cart"
-                    width={24}
-                    height={24}
-                    src={"/shopping-cart.png"} />
-
-                <span className="total-items">{totalItems}</span>
-            </div>
-        </Wrapper>
-    )
-}

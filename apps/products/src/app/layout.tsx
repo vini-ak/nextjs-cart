@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import * as Components from "../../packages/components";
+import { Navbar } from "../../../imports";
 import "./globals.css";
 import { CartProvider } from "@/states/providers";
+import { useCart } from "@/states/hooks/useCart";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,11 +17,13 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const { totalItems } = useCart();
+
   return (
     <html lang="en">
       <body className={inter.className}>
         <CartProvider>
-          <Components.Navbar />
+          <Navbar totalItems={totalItems} />
           {children}
         </CartProvider>
       </body>
