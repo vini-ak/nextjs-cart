@@ -1,8 +1,9 @@
 "use client"
-import { Product } from "@/domain";
+import { Product } from "../../domain";
 import Image from "next/image";
 import { useCallback, useEffect, useState } from "react";
 import * as Styles from "./styles";
+import React from "react";
 
 interface ItemCardProps {
     product: Product;

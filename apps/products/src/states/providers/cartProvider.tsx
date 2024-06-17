@@ -1,5 +1,5 @@
 "use client"
-import { Product } from "@/domain";
+import { Product } from "packages/domain";
 import { createContext, useCallback, useEffect, useReducer, useState } from "react";
 import { CartProducts, cartReducer } from "../reducers";
 
@@ -26,6 +26,7 @@ export const CartProvider = ({ children }: { children: any }) => {
     }, [cart, updated]);
 
     const changeCart = useCallback((product: Product, quantity: number, type: 'add' | 'remove') => {
+        debugger;
         dispatch({ type, quantity, productId: product._id });
         setUpdated(true);
     }, [dispatch]);

@@ -1,7 +1,7 @@
 
 "use client";
 import styled from "styled-components";
-import * as Components from "../../../imports";
+import { Components } from "packages";
 import { useMemo } from "react";
 import { ProductsService } from "@/services";
 import { useCart } from "@/states/hooks/useCart";
