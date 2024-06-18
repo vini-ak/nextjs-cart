@@ -25,7 +25,7 @@ const nextConfig = {
             new NextFederationPlugin({
                 name: 'products',
                 remotes: {
-                    cart: `cart@http://localhost:3002/_next/static/${isServer ? 'ssr' : 'chunks'}/remoteEntry.js`
+                    cart: `cart@http://localhost:3001/_next/static/${isServer ? 'ssr' : 'chunks'}/remoteEntry.js`
                 },
                 filename: 'static/chunks/primaryEntry.js'
             })

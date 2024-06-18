@@ -112,14 +112,14 @@
     "@jridgewell/resolve-uri" "^3.1.0"
     "@jridgewell/sourcemap-codec" "^1.4.14"
 
-"@module-federation/dts-plugin@0.1.20":
-  version "0.1.20"
-  resolved "https://registry.yarnpkg.com/@module-federation/dts-plugin/-/dts-plugin-0.1.20.tgz#6f238567bd96617dc573a0d7d6aacd1bd13fb8bb"
-  integrity sha512-TG5/IKmvwdgZbXn5ZwirVU8cs07H2rGMmhX7CZn6VKVxNufImgzhe+zzy68obuQ2kfZGOMYZ/APchng03qSp5A==
+"@module-federation/dts-plugin@0.1.19":
+  version "0.1.19"
+  resolved "https://registry.yarnpkg.com/@module-federation/dts-plugin/-/dts-plugin-0.1.19.tgz#e2ad0a4a0d8318d1a63a4d7e851ac7044df7d0b4"
+  integrity sha512-NlrpjBX+qkpraYZm1lMMmkdKvQ7X6z3uWPQOk70PVTPxrRVHwxATXC+yt3oxTdwFSkAM06o5B/nJiy+EBbrVeQ==
   dependencies:
-    "@module-federation/managers" "0.1.20"
-    "@module-federation/sdk" "0.1.20"
-    "@module-federation/third-party-dts-extractor" "0.1.20"
+    "@module-federation/managers" "0.1.19"
+    "@module-federation/sdk" "0.1.19"
+    "@module-federation/third-party-dts-extractor" "0.1.19"
     adm-zip "^0.5.10"
     ansi-colors "^4.1.3"
     axios "^1.6.7"
@@ -133,120 +133,120 @@
     rambda "^9.1.0"
     ws "8.17.0"
 
-"@module-federation/enhanced@0.1.20":
-  version "0.1.20"
-  resolved "https://registry.yarnpkg.com/@module-federation/enhanced/-/enhanced-0.1.20.tgz#62eac32ecf2fb7e457ecfdb89ab7dfa239212238"
-  integrity sha512-HpkBa4Rc34GG5ZfOL7oyYKM3gQcNhv9y/Lo5RDja5t06Pudpd6lHos6HnI184Qd0ivkL1ZLLuPn8H75Y9xdasA==
+"@module-federation/enhanced@0.1.19":
+  version "0.1.19"
+  resolved "https://registry.yarnpkg.com/@module-federation/enhanced/-/enhanced-0.1.19.tgz#38455d9d31209809c065bbd70bc80bae019cc297"
+  integrity sha512-Vlcs8DTcVvc9xkJtllhSFXGqqKialpE11Y/+W8YbmVfucyvojc1TuetJxI3jzVu3kp/0qMNRy4qAHiGcaqtMAg==
   dependencies:
-    "@module-federation/dts-plugin" "0.1.20"
-    "@module-federation/managers" "0.1.20"
-    "@module-federation/manifest" "0.1.20"
-    "@module-federation/rspack" "0.1.20"
-    "@module-federation/runtime-tools" "0.1.20"
-    "@module-federation/sdk" "0.1.20"
+    "@module-federation/dts-plugin" "0.1.19"
+    "@module-federation/managers" "0.1.19"
+    "@module-federation/manifest" "0.1.19"
+    "@module-federation/rspack" "0.1.19"
+    "@module-federation/runtime-tools" "0.1.19"
+    "@module-federation/sdk" "0.1.19"
     upath "2.0.1"
 
-"@module-federation/managers@0.1.20":
-  version "0.1.20"
-  resolved "https://registry.yarnpkg.com/@module-federation/managers/-/managers-0.1.20.tgz#d4bf0adefd0adb7b61e22ba9e7ed28e1ad8e4550"
-  integrity sha512-sUaTLPfeE7f8Gt48PzQ+KPTSqlkVXveMOWFP7DxbgZKcpxfRQ3pwQy6sIEux8qVM7/w6UYPQgzeAxI5dHBeWJg==
+"@module-federation/managers@0.1.19":
+  version "0.1.19"
+  resolved "https://registry.yarnpkg.com/@module-federation/managers/-/managers-0.1.19.tgz#a5591fcf422a25db46d2b1ac5e2485fb99c40f36"
+  integrity sha512-XDfx88MyWYfjG/ZQajOYvIqWTEcG7w+KfL5c384EpVocIsqhWsRx5HHcgPqoSZF+YW5AIRuQee5/BTqxC6gT6Q==
   dependencies:
-    "@module-federation/sdk" "0.1.20"
+    "@module-federation/sdk" "0.1.19"
     find-pkg "2.0.0"
     fs-extra "9.1.0"
 
-"@module-federation/manifest@0.1.20":
-  version "0.1.20"
-  resolved "https://registry.yarnpkg.com/@module-federation/manifest/-/manifest-0.1.20.tgz#cb6348def98268b5d7feb3c7c5d9b1bf3a097845"
-  integrity sha512-1htaUVikEZegT6d9JI37E5nZoHuUcxMwaWo/ARxKElVlaRvMGG8lORXYRK9ZxlgxiuJUAKeGicv62ig+ZTl+dQ==
+"@module-federation/manifest@0.1.19":
+  version "0.1.19"
+  resolved "https://registry.yarnpkg.com/@module-federation/manifest/-/manifest-0.1.19.tgz#ca582cb65901b6f2d8173906eb92bb1ded1010e9"
+  integrity sha512-mLq58E1fav0hj+3Q9DIJau/dcCM+75FkkZXwsuVycLQXvr1yUOf2WoEXvU2GjUEslQ0+9TXvligtQ8cus41Iag==
   dependencies:
-    "@module-federation/dts-plugin" "0.1.20"
-    "@module-federation/managers" "0.1.20"
-    "@module-federation/sdk" "0.1.20"
+    "@module-federation/dts-plugin" "0.1.19"
+    "@module-federation/managers" "0.1.19"
+    "@module-federation/sdk" "0.1.19"
     chalk "3.0.0"
     find-pkg "2.0.0"
 
-"@module-federation/nextjs-mf@^8.3.21":
-  version "8.3.21"
-  resolved "https://registry.yarnpkg.com/@module-federation/nextjs-mf/-/nextjs-mf-8.3.21.tgz#296fde56f5b92e492e9161c0529e289084d3e6ac"
-  integrity sha512-Q9wKNpv0O9/EiS825XLYin6AX/rvxjKsXhnnoH9e+d9KdFWUme6XTwyXkPNZbGIfluc3gelr4vZkAik3jSGnEw==
+"@module-federation/nextjs-mf@8.3.20":
+  version "8.3.20"
+  resolved "https://registry.yarnpkg.com/@module-federation/nextjs-mf/-/nextjs-mf-8.3.20.tgz#b8332423adcfd41c790bf1645096b82a5c2ca947"
+  integrity sha512-pKMx54G9quuNJditqsWD65mbJcu3aX2TBpgs/HN863UOLl2OVuzB0WLAN0Ox2lXgrna6f+Ab2En968cjUl4LmQ==
   dependencies:
-    "@module-federation/enhanced" "0.1.20"
-    "@module-federation/node" "2.2.11"
-    "@module-federation/runtime" "0.1.20"
-    "@module-federation/sdk" "0.1.20"
-    "@module-federation/utilities" "3.0.25"
+    "@module-federation/enhanced" "0.1.19"
+    "@module-federation/node" "2.2.10"
+    "@module-federation/runtime" "0.1.19"
+    "@module-federation/sdk" "0.1.19"
+    "@module-federation/utilities" "3.0.24"
     "@module-federation/webpack-type" "0.0.1"
     eventemitter3 "^5.0.0"
     fast-glob "^3.2.11"
     webpack-sources "^3.2.3"
 
-"@module-federation/node@2.2.11":
-  version "2.2.11"
-  resolved "https://registry.yarnpkg.com/@module-federation/node/-/node-2.2.11.tgz#df1aace497e13547a0e754a29aca7f4dd4db11bd"
-  integrity sha512-veCppY3zcj7gh6gbH//QKf1IEH4IY/fcspulT9AzmyFsQ5ry4gfKDipPaaPwudtMvcwbxWT5Ao6tTyEdsO9YvQ==
+"@module-federation/node@2.2.10":
+  version "2.2.10"
+  resolved "https://registry.yarnpkg.com/@module-federation/node/-/node-2.2.10.tgz#a5a8c5eb2b1b9d33b86feab87f3689741b7b3dae"
+  integrity sha512-NbqbKRZP5LSm5GhvcluSRgiuV2ZTx6EEkgpY9CPEcI1pojIwCa9uvXzgd+my4a8uZ+y8IRRRIdoDlWZlmYO9+w==
   dependencies:
-    "@module-federation/enhanced" "0.1.20"
-    "@module-federation/runtime" "0.1.20"
-    "@module-federation/sdk" "0.1.20"
-    "@module-federation/utilities" "3.0.25"
+    "@module-federation/enhanced" "0.1.19"
+    "@module-federation/runtime" "0.1.19"
+    "@module-federation/sdk" "0.1.19"
+    "@module-federation/utilities" "3.0.24"
     encoding "^0.1.13"
     node-fetch "2.7.0"
 
-"@module-federation/rspack@0.1.20":
-  version "0.1.20"
-  resolved "https://registry.yarnpkg.com/@module-federation/rspack/-/rspack-0.1.20.tgz#1b423ad642f7b3b8aa0e36b6b24ef8bf44e98535"
-  integrity sha512-o9TIWcg3A9Krv26oW4z1ADCpjwBsqv9QRIQcHw6Ode9Z+/E8SPfviFMcdhBpvbxiGs56vDc1unkH7TC4qhocXQ==
+"@module-federation/rspack@0.1.19":
+  version "0.1.19"
+  resolved "https://registry.yarnpkg.com/@module-federation/rspack/-/rspack-0.1.19.tgz#efe85367e2545cfb07a387cf20c7a9e71ea38b98"
+  integrity sha512-OdYUH7xxP6uw1xC7NsIx02jwumfRHVl+ZStLKFSTMNI+ilU5LjTrYpWO7khyAuWCKKw/hFtHUaIhOHJQJ0CMWw==
   dependencies:
-    "@module-federation/dts-plugin" "0.1.20"
-    "@module-federation/managers" "0.1.20"
-    "@module-federation/manifest" "0.1.20"
-    "@module-federation/runtime-tools" "0.1.20"
-    "@module-federation/sdk" "0.1.20"
+    "@module-federation/dts-plugin" "0.1.19"
+    "@module-federation/managers" "0.1.19"
+    "@module-federation/manifest" "0.1.19"
+    "@module-federation/runtime-tools" "0.1.19"
+    "@module-federation/sdk" "0.1.19"
 
-"@module-federation/runtime-tools@0.1.20":
-  version "0.1.20"
-  resolved "https://registry.yarnpkg.com/@module-federation/runtime-tools/-/runtime-tools-0.1.20.tgz#1b660156c22e1069d474a9347cfe2faa3d7c1b9a"
-  integrity sha512-iDVKeP0PbmOcfE2Ft4AyfX3/lexGxEnUGxI6bN6hs/rd21jjXh2m1gCWLdiZhy7F52941JZPKZrPv/b6QACwWQ==
+"@module-federation/runtime-tools@0.1.19":
+  version "0.1.19"
+  resolved "https://registry.yarnpkg.com/@module-federation/runtime-tools/-/runtime-tools-0.1.19.tgz#8a205f30b7f917cc2f8a3905f38c8036bb4bc086"
+  integrity sha512-DKX6EkDwT8mmJ5oRGfX9T3Nfynzfs1EYK77S0AN3cDCwbvgJ70l62eI1kN0GDAwLPUd9RzfBc9+Irr2dsOspjw==
   dependencies:
-    "@module-federation/runtime" "0.1.20"
-    "@module-federation/webpack-bundler-runtime" "0.1.20"
+    "@module-federation/runtime" "0.1.19"
+    "@module-federation/webpack-bundler-runtime" "0.1.19"
 
-"@module-federation/runtime@0.1.20":
-  version "0.1.20"
-  resolved "https://registry.yarnpkg.com/@module-federation/runtime/-/runtime-0.1.20.tgz#7a7273de388f3cc3773ad5865bd2a754e605094c"
-  integrity sha512-apMbpAG0uyhMoxObNe9X01Tc9p+YbsFwrgtHFv7LU8EQ9YRAsRUR6NHpZl9LJa7WSyqzJQreNg1GJM0zOC5QvA==
+"@module-federation/runtime@0.1.19":
+  version "0.1.19"
+  resolved "https://registry.yarnpkg.com/@module-federation/runtime/-/runtime-0.1.19.tgz#8093e2b62e0b483de7b4a3fbc5d0bdf732bf0f20"
+  integrity sha512-5yjv8+4dluJ/ViTpOb5/Opzih/YlDB6N/ccDZUHHkNi3H95Rdd6Rh5Xfb/Y/peXNk1aA0O6jlqtxVTMjr1X8rA==
   dependencies:
-    "@module-federation/sdk" "0.1.20"
+    "@module-federation/sdk" "0.1.19"
 
-"@module-federation/sdk@0.1.20":
-  version "0.1.20"
-  resolved "https://registry.yarnpkg.com/@module-federation/sdk/-/sdk-0.1.20.tgz#5874acc4f767fb954469347e0cf1bece01d7773e"
-  integrity sha512-ZVJUmecs/nZvQWCdQLlyF4COQL4s7mDRYynCi5QmTzDvLt1dcckc9EnH0dD1YvFVQUMcq2D3f+XqUTmx0fYjdQ==
+"@module-federation/sdk@0.1.19":
+  version "0.1.19"
+  resolved "https://registry.yarnpkg.com/@module-federation/sdk/-/sdk-0.1.19.tgz#4f8e5da8f5d9bc4b7d02c1dbdfb190acc47ccf18"
+  integrity sha512-vkahNtZPjG8D9kDNqNmfsVf18vgUj8XcjriqcO/AVCQhEa8uVCmu/+yxFDc3XaYfsmyUTrS8dlI8+9sr6aMjLw==
 
-"@module-federation/third-party-dts-extractor@0.1.20":
-  version "0.1.20"
-  resolved "https://registry.yarnpkg.com/@module-federation/third-party-dts-extractor/-/third-party-dts-extractor-0.1.20.tgz#58ec2894badad305c2c4e5b000ccfa633b54aa55"
-  integrity sha512-VkOnDMYPrGcCbO3vze5G7DB0AigU4tqoRFAWfgpqQAbsjtlHrcZuUhwbpL34lCrFMCHjO356RQWoFvEeZUVHWQ==
+"@module-federation/third-party-dts-extractor@0.1.19":
+  version "0.1.19"
+  resolved "https://registry.yarnpkg.com/@module-federation/third-party-dts-extractor/-/third-party-dts-extractor-0.1.19.tgz#4cd27d0f1476617ec71bd38cafc04c896b11ed44"
+  integrity sha512-hvSB8nsxL58WesW9R0dxMiGe31nD7Fzq7sikFd8YWcwwdV56/rZZu8tluvcr50rBU6KVbHFB5dOcu1tTp1O3zQ==
   dependencies:
     find-pkg "2.0.0"
     fs-extra "9.1.0"
     resolve "1.22.8"
 
-"@module-federation/utilities@3.0.25":
-  version "3.0.25"
-  resolved "https://registry.yarnpkg.com/@module-federation/utilities/-/utilities-3.0.25.tgz#c06a124081655bdd9df1dac0d35b2a6c9d1c0490"
-  integrity sha512-1XyQXsjuP0YMGzinJnUJJUmlwWKesRM+NXcPBbZaO0Ljoc7EOuJaGYOUkfWcxB/25Cz0LV7buAsD/YQ5tgP3vA==
+"@module-federation/utilities@3.0.24":
+  version "3.0.24"
+  resolved "https://registry.yarnpkg.com/@module-federation/utilities/-/utilities-3.0.24.tgz#e62f11dafe9af6d9e61d565a139a2743c510a732"
+  integrity sha512-D7ycqOVc6BSr+mhm92f9sdtFTkZ0ae24PUHea6n723tVYYbCVy5yK4s40ebjGwpbWIsKWxBo0h5eAs8+zISCTw==
   dependencies:
-    "@module-federation/sdk" "0.1.20"
+    "@module-federation/sdk" "0.1.19"
 
-"@module-federation/webpack-bundler-runtime@0.1.20":
-  version "0.1.20"
-  resolved "https://registry.yarnpkg.com/@module-federation/webpack-bundler-runtime/-/webpack-bundler-runtime-0.1.20.tgz#adcb18680296f37074a49f3caad8cc96c94e04db"
-  integrity sha512-TPf4VZitpenVhqMUuPIL/WlvVpMJLBJMtojWMScfv3FENTtxcITdzlyO0D6hhJvjXd4KWhSzMywuFAQ2B4GVAg==
+"@module-federation/webpack-bundler-runtime@0.1.19":
+  version "0.1.19"
+  resolved "https://registry.yarnpkg.com/@module-federation/webpack-bundler-runtime/-/webpack-bundler-runtime-0.1.19.tgz#a920d0c6b8481128daf57304bfd3abe6ef298b80"
+  integrity sha512-GPs8UWJcvCXZFodhVR81S8dAIu5xJk5nGizroVfcjibxn9sPDoPDA/+93Glw7eu1nPrmLWXv1E3g0eeEqqnzRg==
   dependencies:
-    "@module-federation/runtime" "0.1.20"
-    "@module-federation/sdk" "0.1.20"
+    "@module-federation/runtime" "0.1.19"
+    "@module-federation/sdk" "0.1.19"
 
 "@module-federation/webpack-type@0.0.1":
   version "0.0.1"
@@ -386,9 +386,9 @@
   integrity sha512-dRLjCWHYg4oaA77cxO64oO+7JwCwnIzkZPdrrC71jQmQtlhM556pwKo5bUzqvZndkVbeFLIIi+9TC40JNF5hNQ==
 
 "@types/node@*", "@types/node@^20":
-  version "20.14.2"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-20.14.2.tgz#a5f4d2bcb4b6a87bffcaa717718c5a0f208f4a18"
-  integrity sha512-xyu6WAMVwv6AKFLB+e/7ySZVr/0zLCzOa7rSpq6jNwpqOrUbcACDWC+53d4n2QHOnDou0fbIsg8wZu/sxrnI4Q==
+  version "20.14.5"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-20.14.5.tgz#fe35e3022ebe58b8f201580eb24e1fcfc0f2487d"
+  integrity sha512-aoRR+fJkZT2l0aGOJhuA8frnCSoNX6W7U2mpNq63+BxBIj5BQFt8rHy627kijCmm63ijdSdwvGgpUsU6MBsZZA==
   dependencies:
     undici-types "~5.26.4"
 
@@ -1155,9 +1155,9 @@ ee-first@1.1.1:
   integrity sha512-WMwm9LhRUo+WUaRN+vRuETqG89IgZphVSNkdFgeb6sS/E4OrDIN7t48CAewSHXc6C8lefD8KKfr5vY61brQlow==
 
 electron-to-chromium@^1.4.796:
-  version "1.4.803"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.803.tgz#cf55808a5ee12e2a2778bbe8cdc941ef87c2093b"
-  integrity sha512-61H9mLzGOCLLVsnLiRzCbc63uldP0AniRYPV3hbGVtONA1pI7qSGILdbofR7A8TMbOypDocEAjH/e+9k1QIe3g==
+  version "1.4.805"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.805.tgz#1d526e384c20944a3c68f618f9774edc384c4733"
+  integrity sha512-8W4UJwX/w9T0QSzINJckTKG6CYpAUTqsaWcWIsdud3I1FYJcMgW9QqT1/4CBff/pP/TihWh13OmiyY8neto6vw==
 
 emoji-regex@^8.0.0:
   version "8.0.0"
@@ -2510,7 +2510,7 @@ neo-async@^2.6.2:
   resolved "https://registry.yarnpkg.com/neo-async/-/neo-async-2.6.2.tgz#b4aafb93e3aeb2d8174ca53cf163ab7d7308305f"
   integrity sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw==
 
-next@14.2.4:
+next@^14.1.4:
   version "14.2.4"
   resolved "https://registry.yarnpkg.com/next/-/next-14.2.4.tgz#ef66c39c71e2d8ad0a3caa0383c8933f4663e4d1"
   integrity sha512-R8/V7vugY+822rsQGQCjoLhMuC9oFj9SOi4Cl4b2wjDrseD0LRZ10W7R6Czo4w9ZznVSshKjuIomsRjvm9EKJQ==
@@ -2774,9 +2774,9 @@ queue-microtask@^1.2.2:
   integrity sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A==
 
 rambda@^9.1.0:
-  version "9.2.0"
-  resolved "https://registry.yarnpkg.com/rambda/-/rambda-9.2.0.tgz#c67bb792bf627dadcc9188a1558cfdf0bc0712d5"
-  integrity sha512-RjM8TBNPR+iSvWLqbBpFveDfEf2RPRKHuwBHjQdXsYFDwn3MIvgmJiqVVC1CIQKnOwzeDQd44zqDFgSKQ7RT1Q==
+  version "9.2.1"
+  resolved "https://registry.yarnpkg.com/rambda/-/rambda-9.2.1.tgz#d52070e457ef16d51693f5805679774697e3362a"
+  integrity sha512-6Dp+QQVQuAuhwBlbIvL2FjJVHCKF29W+n9ca/BMTVDqpj+Q7KKqUh7UAINEna8aaB2/oRvPuL5hViCTQARa70Q==
 
 randombytes@^2.1.0:
   version "2.1.0"
@@ -3396,7 +3396,7 @@ webpack-sources@^3.2.3:
   resolved "https://registry.yarnpkg.com/webpack-sources/-/webpack-sources-3.2.3.tgz#2d4daab8451fd4b240cc27055ff6a0c2ccea0cde"
   integrity sha512-/DyMEOrDgLKKIG0fmvtz+4dUX/3Ghozwgm6iPp8KRhvn+eQf9+Q7GWxVNMk3+uCPWfdXYC4ExGBckIXdFEfH1w==
 
-webpack@^5.92.0:
+webpack@^5.90.0:
   version "5.92.0"
   resolved "https://registry.yarnpkg.com/webpack/-/webpack-5.92.0.tgz#cc114c71e6851d220b1feaae90159ed52c876bdf"
   integrity sha512-Bsw2X39MYIgxouNATyVpCNVWBCuUwDgWtN78g6lSdPJRLaQ/PUVm/oXcaRAyY/sMFoKFQrsPeqvTizWtq7QPCA==
