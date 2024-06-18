@@ -19,7 +19,8 @@
     "paths": {
       "@/*": [
         "./src/*"
-      ]
+      ],
+      "packages/*": ["../../packages/*"],
     },
     "forceConsistentCasingInFileNames": true
   },
