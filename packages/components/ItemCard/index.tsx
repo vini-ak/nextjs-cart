@@ -1,5 +1,5 @@
-"use client"
 import { Product } from "../../domain";
+import { Inter } from "next/font/google";
 import Image from "next/image";
 import { useCallback, useEffect, useState } from "react";
 import * as Styles from "./styles";
@@ -9,6 +9,8 @@ interface ItemCardProps {
     product: Product;
     addToCart(product: Product, quantity: number): void;
 }
+
+const inter = Inter({ subsets: ["latin"] });
 
 export const ItemCard = ({ addToCart, product }: ItemCardProps) => {
     const [itemQuantity, setItemQuantity] = useState<number>(0); 
@@ -33,7 +35,7 @@ export const ItemCard = ({ addToCart, product }: ItemCardProps) => {
     }, [itemQuantity]);
 
     return (
-        <Styles.Card>
+        <Styles.Card className={inter.className}>
             {
                 isClient && <>
                     <Image 

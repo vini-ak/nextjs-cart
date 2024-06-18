@@ -18,6 +18,7 @@ const nextConfig = {
             }
         ]
     },
+    transpilePackages: ["../../packages"],
     webpack: (config, options) => {
         const { isServer } = options;
         config.experiments = { topLevelAwait: true };

@@ -14,6 +14,7 @@ export const Wrapper = styled.nav`
     align-items: center;
     padding: .25rem 4rem;
     position: fixed;
+    top: 0;
 
     & > .cart {
         position: relative;
