@@ -38,14 +38,13 @@ export const ItemCard = ({ addToCart, product }: ItemCardProps) => {
         <Styles.Card className={inter.className}>
             {
                 isClient && <>
-                    <Image 
-                        src={product.photo} 
-                        alt={product.name}
-                        // blurDataURL={undefined}
-                        // placeholder="blur" 
-                        width={500}
-                        height={300}
-                    />
+                    {product.photo && 
+                        <Image 
+                            src={product.photo} 
+                            alt={product.name}
+                            width={500}
+                            height={300}
+                    />}
                     <div className="content">
                         <p className="item-card-title">{product.name}</p>
                         <p className="item-card-price">{product.price.toFixed(2).replace('.', ',')}</p>

@@ -28,7 +28,9 @@ const nextConfig = {
                 remotes: {
                     cart: `cart@http://localhost:3001/_next/static/${isServer ? 'ssr' : 'chunks'}/remoteEntry.js`
                 },
-                filename: 'static/chunks/primaryEntry.js'
+                filename: 'static/chunks/primaryEntry.js',
+                dts: false,
+                shared: {},
             })
         );
 
