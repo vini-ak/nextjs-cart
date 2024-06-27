@@ -7,13 +7,17 @@ const nextConfig = {
     webpack: (config, options) => {
         const { isServer } = options;
         config.experiments = { topLevelAwait: true };
+        config.devServer = {
+            allowedHosts: 'all',
+            liveReload: true
+        };
         config.plugins.push(
             new NextFederationPlugin({
                 name: 'cart',
                 filename: 'static/chunks/primaryEntry.js',
                 dts: false,
                 remotes: {
-                    products: `products@http://localhost:3000/_next/static/${isServer ? 'ssr' : 'chunks'}/remoteEntry.js`
+                    products: `products@http://localhost:3000/_next/static/${isServer ? 'ssr' : 'chunks'}/primaryEntry.js`
                 },
                 exposes: {
                     "./cart": "./src/pages/index.tsx"

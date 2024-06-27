@@ -1,5 +1,8 @@
+// import CartPage from "cart";
+import dynamic from "next/dynamic";
+
 // @ts-ignore
-import CartPage from "cart";
+const CartPage: any = dynamic(() => import("cart/cart"));
 
 const Cart = CartPage;
 Cart.getInitialProps = CartPage.getInitialProps;

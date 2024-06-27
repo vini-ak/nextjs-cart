@@ -22,11 +22,19 @@ const nextConfig = {
     webpack: (config, options) => {
         const { isServer } = options;
         config.experiments = { topLevelAwait: true };
+        config.devServer = {
+            liveReload: true,
+            headers: {
+                "Access-Control-Allow-Origin": "*",
+                "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, PATCH, OPTIONS",
+                "Access-Control-Allow-Headers": "X-Requested-With, content-type, Authorization"
+              }
+        };
         config.plugins.push(
             new NextFederationPlugin({
                 name: 'products',
                 remotes: {
-                    cart: `cart@http://localhost:3001/_next/static/${isServer ? 'ssr' : 'chunks'}/remoteEntry.js`
+                    cart: `cart@http://localhost:3001/_next/static/${isServer ? 'ssr' : 'chunks'}/primaryEntry.js`
                 },
                 filename: 'static/chunks/primaryEntry.js',
                 dts: false,
