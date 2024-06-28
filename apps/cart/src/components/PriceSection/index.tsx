@@ -1,9 +1,15 @@
 import { useState } from "react";
 import { Section } from "./styles";
-import { DefaultButton } from "packages/components";
+import { DefaultButton } from "../DefaultButton";
+import { ButtonStyleProps } from "../DefaultButton/types";
 
 export const PriceSection = () => {
     const [price, setPrice] = useState("0,00");
+
+    const buttonStyle: ButtonStyleProps = {
+        $size: "xg",
+        $bgColor: "green"
+    }
 
     return (
         <Section>
@@ -11,7 +17,7 @@ export const PriceSection = () => {
             <p className="price">{price}</p>
             <DefaultButton 
                 title="Finalizar compra"
-                style={{ size: "xg", backgroundColor: "green" }}
+                styleProps={buttonStyle}
                 onClick={() => {
                     debugger;
                 }}

@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Card } from './styles';
-import { DefaultButton } from 'packages/components';
+import { DefaultButton } from '../DefaultButton';
+import { ButtonStyleProps } from '../DefaultButton/types';
 
 interface CartItemProps {
     productName: string;
@@ -16,6 +17,11 @@ export const CartItem = (props: CartItemProps) => {
         setQuantity(props.quantity ?? 1);
     }, [props.quantity]);
 
+    const buttonStyle: ButtonStyleProps = {
+        $size: "md",
+        $bgColor: "red"
+    };
+
     return (
         <Card>
             <div className="content">
@@ -27,7 +33,7 @@ export const CartItem = (props: CartItemProps) => {
                 <DefaultButton 
                     title="Remover"
                     onClick={() => {}}
-                    style={{ size: "md", backgroundColor: "red" }}
+                    styleProps={buttonStyle}
                 />
                 <button className="remove-item">Remover</button>
             </div>

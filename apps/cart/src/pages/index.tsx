@@ -1,20 +1,19 @@
 import Head from "next/head";
 import { Inter } from "next/font/google";
 import { PriceSection } from "@/components/PriceSection";
-import { ItemCard } from "packages/components";
-import { Product } from "packages/domain";
+import { Product } from "../domain";
 import { useState } from "react";
 import { CartItem } from "@/components/CartItem";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
-  const [items, setItems] = useState<Product[]>([
-    { name: "teste", _id: "dfa21", price: 3.2, photo: undefined },
-    { name: "teste", _id: "dfa21", price: 3.2, photo: undefined },
-    { name: "teste", _id: "dfa21", price: 3.2, photo: undefined },
-    { name: "teste", _id: "dfa21", price: 3.2, photo: undefined },
-    { name: "teste", _id: "dfa21", price: 3.2, photo: undefined },
+  const [items] = useState<Product[]>([
+    { name: "teste", _id: "dfa21S", price: 3.2, photo: undefined },
+    { name: "teste", _id: "dfa21ar", price: 3.2, photo: undefined },
+    { name: "teste", _id: "dfa21FA", price: 3.2, photo: undefined },
+    { name: "teste", _id: "dfa21CA", price: 3.2, photo: undefined },
+    { name: "teste", _id: "dfa21E", price: 3.2, photo: undefined },
   ]);
 
   return (
@@ -28,9 +27,9 @@ export default function Home() {
       <main className={inter.className}>
         <section id="items">
           {
-            items.map((product: Product) => (
+            items.map((product: Product, index: number) => (
               <CartItem 
-                key={product._id}
+                key={product._id.concat(index.toString())}
                 image={product.photo}
                 productName={product.name}
                 price={product.price}

@@ -1,4 +1,5 @@
 import { NextFederationPlugin } from '@module-federation/nextjs-mf';
+import packageJson from './package.json' assert { type: 'json' };
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -38,7 +39,11 @@ const nextConfig = {
                 },
                 filename: 'static/chunks/primaryEntry.js',
                 dts: false,
-                shared: {},
+                shared: {
+                    react: { singleton: true, eager: true, requiredVersion: packageJson.dependencies.react },
+                    "styled-components": { singleton: true, eager: true, requiredVersion: packageJson.dependencies["styled-components"] },
+                    "react-dom": { singleton: true, eager: true, requiredVersion: packageJson.dependencies["react-dom"] }
+                },
             })
         );
 
