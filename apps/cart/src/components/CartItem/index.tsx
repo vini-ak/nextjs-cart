@@ -32,7 +32,7 @@ export const CartItem = (props: CartItemProps) => {
             <div className="actions">
                 <DefaultButton 
                     title="Remover"
-                    onClick={() => {}}
+                    onClick={() => {debugger;}}
                     styleProps={buttonStyle}
                 />
                 <button className="remove-item">Remover</button>

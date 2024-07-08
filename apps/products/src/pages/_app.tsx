@@ -5,7 +5,6 @@ import type { AppProps } from "next/app";
 import { Navbar } from "packages/components";
 
 const _Navbar = () => {
-  debugger; 
   const { totalItems } = useCart();
   return <Navbar totalItems={totalItems} />
 }

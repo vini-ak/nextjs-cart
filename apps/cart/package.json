@@ -1,28 +1,35 @@
 {
   "name": "cart",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "rm -rf .next && NEXT_PRIVATE_LOCAL_WEBPACK=true next dev -p 3001",
-    "build": "NEXT_PRIVATE_LOCAL_WEBPACK=true next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
+  "packageManager": "yarn@4.3.1",
   "dependencies": {
-    "@module-federation/nextjs-mf": "8.3.20",
+    "@module-federation/nextjs-mf": "8.3.27",
     "@types/styled-components": "^5.1.34",
-    "next": "^14.2.4",
+    "next": "^14.1.4",
     "react": "^18",
     "react-dom": "^18",
     "styled-components": "^6.1.11",
     "webpack": "^5.90.0"
   },
   "devDependencies": {
-    "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
-    "eslint": "^8",
-    "eslint-config-next": "14.2.4",
-    "typescript": "^5"
+    "@types/node": "^18.11.18",
+    "@types/react": "^18.0.28",
+    "@types/react-dom": "^18.0.11",
+    "typescript": "^5.5.3"
+  },
+  "scripts": {
+    "dev": "rm -rf .next &&  NEXT_PRIVATE_LOCAL_WEBPACK=true next dev -p 3001",
+    "build": "next telemetry disable && NEXT_PRIVATE_LOCAL_WEBPACK=true next build",
+    "start": "next start -p 3001"
+  },
+  "eslintConfig": {
+    "extends": "eslint:recommended",
+    "settings": {
+      "react": {
+        "version": "detect"
+      }
+    },
+    "rules": {
+      "react/react-in-jsx-scope": "off"
+    }
   }
 }

@@ -12,7 +12,6 @@ interface CartContextProps {
 export const CartContext = createContext({ } as CartContextProps);
 
 export const CartProvider = ({ children }: { children: any }) => {
-    debugger;
     const [cart, dispatch] = useReducer(cartReducer, {} as CartProducts);
     const [totalItems, setTotalItems] = useState<number>(0);
     const [updated, setUpdated] = useState(false);
@@ -26,7 +25,6 @@ export const CartProvider = ({ children }: { children: any }) => {
     }, [cart, updated]);
 
     const changeCart = useCallback((product: Product, quantity: number, type: 'add' | 'remove') => {
-        debugger;
         dispatch({ type, quantity, productId: product._id });
         setUpdated(true);
     }, [dispatch]);
@@ -34,6 +32,5 @@ export const CartProvider = ({ children }: { children: any }) => {
     const addToCart = (product: Product, quantity: number) => changeCart(product, quantity, 'add');
     const removeFromCart = (product: Product, quantity: number) => changeCart(product, quantity, 'remove');
 
-    debugger;
     return <CartContext.Provider value={{ items: cart, totalItems, addToCart, removeFromCart }} children={children} />
 };
