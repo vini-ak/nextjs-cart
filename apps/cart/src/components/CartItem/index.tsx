@@ -6,12 +6,13 @@ import { ButtonStyleProps } from '../DefaultButton/types';
 interface CartItemProps {
     productName: string;
     price: number;
+    onRemove: () => Promise<void>;
     quantity?: number;
     image?: string;
 }
 
 export const CartItem = (props: CartItemProps) => {
-    const [quantity, setQuantity] = useState<number>(1);
+    const [quantity, setQuantity] = useState<number>(props.quantity ?? 1);
 
     useEffect(() => {
         setQuantity(props.quantity ?? 1);
@@ -32,7 +33,7 @@ export const CartItem = (props: CartItemProps) => {
             <div className="actions">
                 <DefaultButton 
                     title="Remover"
-                    onClick={() => {debugger;}}
+                    onClick={props.onRemove}
                     styleProps={buttonStyle}
                 />
                 <button className="remove-item">Remover</button>
