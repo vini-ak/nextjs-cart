@@ -1,6 +1,9 @@
 import { NextFederationPlugin } from '@module-federation/nextjs-mf';
-import { resolve } from 'path';
+import path from 'path';
 // import packageJson from './package.json' assert { type: 'json' };
+
+const __dirname = path.resolve();
+console.log(__dirname);
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -35,6 +38,13 @@ const nextConfig = {
                 "Access-Control-Allow-Headers": "X-Requested-With, content-type, Authorization"
             },
         };
+        config.resolve = {
+            ...config.resolve,
+            alias: {
+                ...config.resolve.alias,
+                'state': path.resolve(__dirname, '../state/src/stores/index.ts')
+            },
+        };
         config.plugins.push(
             new NextFederationPlugin({
                 name: 'products',
@@ -42,7 +52,8 @@ const nextConfig = {
                 dts: false,
                 // runtimePlugins: [resolve('./src/middleware.ts')],
                 remotes: {
-                    cart: `cart@http://localhost:3001/_next/static/${isServer ? 'ssr' : 'chunks'}/remoteEntry.js`
+                    cart: `cart@http://localhost:3001/_next/static/${isServer ? 'ssr' : 'chunks'}/remoteEntry.js`,
+                    stores: `stores@http://localhost:3030/_next/static/${isServer ? 'ssr' : 'chunks'}/remoteEntry.js`
                 },
                 shared: {},
             })

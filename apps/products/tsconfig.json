@@ -21,6 +21,7 @@
         "./src/*"
       ],
       "packages/*": ["../../packages/*"],
+      "state/*": ["../state/src/stores"]
     },
     "forceConsistentCasingInFileNames": true
   },

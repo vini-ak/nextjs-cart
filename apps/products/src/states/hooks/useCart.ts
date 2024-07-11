@@ -1,8 +1,10 @@
-import { useContext } from "react"
-import { CartContext } from "../providers"
+import { lazy } from "react";
 
-export const useCart = () => {
-    const { items, totalItems, addToCart, removeFromCart } = useContext(CartContext);
-    
-    return { items, totalItems, addToCart, removeFromCart };
-}
+let useCart: any = () => null;
+
+// @ts-ignore
+useCart = lazy(() => import("stores/cartStore"));
+
+debugger;
+export default useCart;
+
