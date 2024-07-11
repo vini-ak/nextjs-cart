@@ -10,6 +10,9 @@ const nextConfig = {
     compiler: {
         styledComponents: true
     },
+    env: {
+        API_URL: 'http://localhost:4000'
+    },
     webpack: (config, options) => {
         const { isServer } = options;
         config.experiments = { topLevelAwait: true };

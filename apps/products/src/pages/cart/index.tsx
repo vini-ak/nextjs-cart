@@ -7,7 +7,6 @@ let CartPage: any = () => null;
 
 // @ts-ignore
 CartPage  = lazy(() => import("cart/cart"));
-// debugger;
 
 const Cart = CartPage;
 Cart.getInitialProps = CartPage.getInitialProps;

@@ -4,7 +4,6 @@ import type { NextRequest } from 'next/server';
 const corsOrigins = ['*'];
 
 export default function middleware(req: NextRequest) {
-    debugger;
     const origin = req.headers.get('origin');
     const res = NextResponse.next();
 

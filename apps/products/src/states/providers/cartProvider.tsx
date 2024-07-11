@@ -25,7 +25,7 @@ export const CartProvider = ({ children }: { children: any }) => {
     }, [cart, updated]);
 
     const changeCart = useCallback((product: Product, quantity: number, type: 'add' | 'remove') => {
-        dispatch({ type, quantity, productId: product._id });
+        dispatch({ type, quantity, productId: product.id });
         setUpdated(true);
     }, [dispatch]);
 

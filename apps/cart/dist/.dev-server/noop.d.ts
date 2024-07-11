@@ -1,0 +1,2 @@
+export * from './compiled-types/node_modules/@module-federation/nextjs-mf/dist/src/federation-noop';
+export { default } from './compiled-types/node_modules/@module-federation/nextjs-mf/dist/src/federation-noop';

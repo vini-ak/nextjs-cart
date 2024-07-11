@@ -1,11 +1,11 @@
-import { useState } from "react";
 import { Section } from "./styles";
 import { DefaultButton } from "../DefaultButton";
 import { ButtonStyleProps } from "../DefaultButton/types";
 
-export const PriceSection = () => {
-    const [price, setPrice] = useState("0,00");
-
+interface PriceSectionProps {
+    price: string;
+}
+export const PriceSection = (props: PriceSectionProps) => {
     const buttonStyle: ButtonStyleProps = {
         $size: "xg",
         $bgColor: "green"
@@ -14,12 +14,11 @@ export const PriceSection = () => {
     return (
         <Section>
             <p>Preço:</p>
-            <p className="price">{price}</p>
+            <p className="price">{props.price}</p>
             <DefaultButton 
                 title="Finalizar compra"
                 styleProps={buttonStyle}
                 onClick={() => {
-                    debugger;
                 }}
             />
         </Section>
