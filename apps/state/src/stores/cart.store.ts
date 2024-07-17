@@ -1,6 +1,12 @@
 import { create } from 'zustand';
 
-export const useCart = create((set) => ({
+// interface IUseCart {
+//   cart: any[];
+//   addToCart: (product: any) => void;
+//   removeFromCart: (productId: string) => void;
+// }
+
+const useCart = create((set) => ({
   cart: [],
   addToCart: (product) =>
     set((state) => ({ cart: [...state.cart, product] })),
@@ -9,3 +15,6 @@ export const useCart = create((set) => ({
       cart: state.cart.filter((product) => product.id !== productId),
     })),
 }));
+
+debugger;
+export default useCart;

@@ -1,8 +1,21 @@
 import { lazy } from "react";
+import useImportHook from "./useImportHook";
 
-// @ts-ignore
-import useCart from "stores/cartStore";
+interface IUseCart {
+    cart: any[];
+    addToCart: (product: any) => void;
+    removeFromCart: (productId: string) => void;
+}
 
-debugger;
+
+const useCart = () => {
+    // @ts-ignore
+    const cart = useImportHook<IUseCart>(() => import("stores/cartStore"));
+    if(!!cart) {
+        debugger;
+    }
+    return { ...cart, isLoaded: !!cart };
+}
+
 export default useCart;
 

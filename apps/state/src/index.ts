@@ -1,3 +1,2 @@
-import { useCart } from './stores';
- 
+import useCart from './stores/cart.store';
 export { useCart }

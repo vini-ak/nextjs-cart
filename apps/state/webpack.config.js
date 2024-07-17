@@ -29,10 +29,6 @@ module.exports = (env, argv) => {
     },
   };
 
-  console.log("Porta: ",  configs[argv.mode].PORT);
-  console.log({ env, argv, configs: configs[argv.mode] });
-
-
   return {
     output: {
       publicPath: configs[argv.mode].PUBLIC_PATH,
