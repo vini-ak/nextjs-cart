@@ -1,4 +1,4 @@
-import { useCart } from "@/states/hooks/useCart";
+import useCart from "@/states/hooks/useCart";
 import { CartProvider } from "@/states/providers";
 import "@/styles/globals.css";
 import type { AppProps } from "next/app";

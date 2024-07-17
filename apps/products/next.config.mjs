@@ -1,6 +1,5 @@
 import { NextFederationPlugin } from '@module-federation/nextjs-mf';
 import path from 'path';
-// import packageJson from './package.json' assert { type: 'json' };
 
 const __dirname = path.resolve();
 console.log(__dirname);
@@ -53,7 +52,7 @@ const nextConfig = {
                 // runtimePlugins: [resolve('./src/middleware.ts')],
                 remotes: {
                     cart: `cart@http://localhost:3001/_next/static/${isServer ? 'ssr' : 'chunks'}/remoteEntry.js`,
-                    stores: `stores@http://localhost:3030/_next/static/${isServer ? 'ssr' : 'chunks'}/remoteEntry.js`
+                    stores: `stores@http://localhost:3030/static/chunks/remoteEntry.js`
                 },
                 shared: {},
             })

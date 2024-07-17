@@ -3,6 +3,7 @@ const { ModuleFederationPlugin } = require('webpack').container;
 const deps = require("./package.json").dependencies;
 
 module.exports = (env, argv) => {
+  
   const configs = {
     appName: "stores",
     appFileName: 'static/chunks/remoteEntry.js',
@@ -28,6 +29,7 @@ module.exports = (env, argv) => {
     },
   };
 
+  console.log("Porta: ",  configs[argv.mode].PORT);
   console.log({ env, argv, configs: configs[argv.mode] });
 
 
