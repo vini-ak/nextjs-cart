@@ -12,6 +12,7 @@ const _Navbar = () => {
   const { cart, isLoaded } = useCart();
 
   useEffect(() => {
+    debugger;
     setTotalItems(cart?.reduce((acc: any, item: any) => acc + item.quantity, 0));
   }, [cart]);
 

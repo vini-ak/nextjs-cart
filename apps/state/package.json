@@ -3,7 +3,7 @@
   "packageManager": "yarn@4.3.1",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "webpack serve --watch --mode development",
+    "dev": "webpack serve --watch --mode development",
     "build": "webpack serve --mode production"
   },
   "dependencies": {

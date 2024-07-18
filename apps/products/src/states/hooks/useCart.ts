@@ -1,4 +1,3 @@
-import { lazy } from "react";
 import useImportHook from "./useImportHook";
 
 interface IUseCart {
@@ -11,6 +10,7 @@ interface IUseCart {
 const useCart = () => {
     // @ts-ignore
     const cart = useImportHook<IUseCart>(() => import("stores/cartStore"));
+    debugger;
     if(!!cart) {
         debugger;
     }

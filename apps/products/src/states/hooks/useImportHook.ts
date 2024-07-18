@@ -5,11 +5,12 @@ const useImportHook = <T>(moduleImport: any) => {
     const [hook, setHook] = useState<() => T>();
     useEffect(() => {
         moduleImport().then((module: any) => {
+            debugger;
             setHook(module.default);
         });
     }, []);
 
-    return hook;
+    return hook && hook();
 }
 
 export default useImportHook;
